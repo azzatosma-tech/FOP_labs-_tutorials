@@ -208,7 +208,20 @@ public class Tutorial03 {
             System.out.println("Biggest number: " + zz);
         }
 
-        // Close Scanner only at the end
+        // 
         input.close();
+        // Question 5: Determine Whether a Year Is a Leap Year 
+        Scanner leapYear = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = leapYear.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        leapYear.close();
     }
 }
