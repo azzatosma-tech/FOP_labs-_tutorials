@@ -1,6 +1,4 @@
 
-package Tutorials;
-
 public class Tutorial04 {
 
     public static void main(String[] args) {
