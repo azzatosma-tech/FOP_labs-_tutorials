@@ -1,6 +1,6 @@
 // #task q4: change month to nov and calendar format to start from Monday
 
-package Lab04;
+package Tasks;
 
 import java.util.Scanner;
 
@@ -74,34 +74,4 @@ public class Lab04Q1 {
         }
     }
 
-    private static void printCalendar(
-            String monthName, int totalDays, int firstDay) {
-
-        String columnFormat = "%4s";
-
-        System.out.println();
-        System.out.println(monthName);
-
-        // Calendar starts on Monday
-        System.out.printf("%4s%4s%4s%4s%4s%4s%4s%n",
-                "Mon", "Tue", "Wed", "Thu",
-                "Fri", "Sat", "Sun");
-
-        // Print empty spaces before November 1
-        for (int i = 0; i < firstDay; i++) {
-            System.out.printf(columnFormat, "");
-        }
-
-        // Print days of November
-        for (int day = 1; day <= totalDays; day++) {
-            System.out.printf(columnFormat, day);
-
-            if ((day + firstDay) % 7 == 0) {
-                System.out.println();
-            }
-        }
-
-        System.out.println();
-    }
 }
-
